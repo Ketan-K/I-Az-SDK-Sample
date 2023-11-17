@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+ *  Copyright (c) 2021 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+-->
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="WebRTC code samples">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta itemprop="description" content="Client-side WebRTC code samples">
+    <meta itemprop="name" content="WebRTC code samples">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+
+
+    <base target="_blank">
+
+    <title>Peer connection between two tabs</title>
+
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
+
+    <div id="container">
+        <h1><a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">WebRTC samples</a>
+            <span>Peer connection</span>
+        </h1>
+
+        <p>This sample shows how to setup a connection between two peers in different tabs using
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection">RTCPeerConnection</a>
+            and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel</a>
+        </p>
+
+        <video id="localVideo" playsinline autoplay muted></video>
+        <video id="remoteVideo" playsinline autoplay></video>
+
+        <div class="box">
+            <button id="callButton">Call</button>
+            <button id="acceptButton">Accept</button>
+            <button id="muteAudioButton">Mute Audio</button>
+            <button id="muteVideoButton">Mute Video</button>
+            <button id="promoteButton">Upgrade</button>
+            <button id="changeBitRateButton">Change Bit Rate(64k)</button>
+            <button id="changeFrameRateButton">Change Frame Rate (10)</button>
+            <button id="changeResolutionButton">Change Resolution (1280 * 720)</button>
+            <button id="hangupButton">Hang Up</button>
+        </div>
+
+        <p>Click the Call button to start the call in a tab to make a call</p>
+        <p>Click the Accppt button to accept the call in another tab of the same browser</p>
+
+
+        <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/peerconnection/channel"
+            title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+
+    </div>
+
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="js/main.js" async></script>
+
+</body>
+
+</html>

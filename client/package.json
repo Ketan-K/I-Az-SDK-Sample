@@ -1,0 +1,33 @@
+{
+  "name": "sdk-app",
+  "version": "1.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "app:dir": "electron-builder --dir",
+    "app:dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "extraResources": [
+      "azure/DLLs"
+    ],
+    "appId": "azure-sdk.intermedia",
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.3"
+  },
+  "dependencies": {
+    "@lwahonen/ffi-napi": "^4.0.12",
+    "@lwahonen/ref-napi": "^4.0.8"
+  }
+}
